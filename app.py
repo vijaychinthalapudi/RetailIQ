@@ -1,47 +1,41 @@
-from flask import Flask, request, jsonify, send_from_directory
-import sys
-from pathlib import Path
+from flask import Flask, jsonify, request, send_from_directory
 
-# --------------------------------------------------
-# Project paths
-# --------------------------------------------------
-
-BASE_DIR = Path(__file__).resolve().parent
-SRC_DIR = BASE_DIR / "src"
-FRONTEND_DIR = BASE_DIR / "frontend"
-
-sys.path.append(str(SRC_DIR))
-
-
-# --------------------------------------------------
-# Import RetailIQ modules
-# --------------------------------------------------
-
-from data_loader import load_all_data
-from analytics import (
+from src.data_loader import load_all_data
+from src.analytics import (
     inventory_demand_analysis,
-    sales_trends
+    sales_trends,
 )
-from business_rules import generate_all_recommendations
-from gemini_client import ask_gemini
+from src.business_rules import generate_all_recommendations
+from src.query_router import detect_query_intent
+from src.evidence_builder import (
+    build_deterministic_evidence,
+    format_evidence_for_question,
+)
+from src.index_manager import load_index, index_exists
+from src.retriever import EvidenceRetriever
+from src.gemini_client import ask_gemini
 
-
-# --------------------------------------------------
-# Flask application
-# --------------------------------------------------
 
 app = Flask(
     __name__,
-    static_folder=str(FRONTEND_DIR),
-    static_url_path=""
+    static_folder="frontend"
 )
 
 
 # --------------------------------------------------
-# Load and analyse business data
+# Load business data
 # --------------------------------------------------
 
+print("Loading RetailIQ business data...")
+
 data = load_all_data()
+
+print("Business data loaded successfully.")
+
+
+# --------------------------------------------------
+# Build deterministic analytics
+# --------------------------------------------------
 
 inventory_analysis = inventory_demand_analysis(
     data["inventory"],
@@ -54,190 +48,91 @@ trends = sales_trends(
     data["products"]
 )
 
+reference_date = data["sales"]["date"].max()
+
 recommendations = generate_all_recommendations(
     inventory_analysis,
-    trends
+    trends,
+    reference_date=reference_date
 )
 
 
 # --------------------------------------------------
-# Build grounded business context for Gemini
+# Load local evidence index
 # --------------------------------------------------
 
-def build_business_context():
-    """
-    Build a factual context from the retail data.
+retriever = None
 
-    Gemini receives only information calculated from
-    the application's own business data.
-    """
+if index_exists():
+    print("Loading saved evidence index...")
 
-    context_parts = []
+    documents, embeddings = load_index()
 
-    # -------------------------------
-    # Sales overview
-    # -------------------------------
-
-    total_units = int(data["sales"]["quantity"].sum())
-
-    total_revenue = (
-        data["sales"]["quantity"] *
-        data["sales"]["unit_price"]
-    ).sum()
-
-    transaction_count = len(data["sales"])
-
-    context_parts.append(
-        f"""
-OVERALL SALES:
-Total units sold: {total_units}
-Total revenue: {total_revenue:,.0f}
-Number of sales records: {transaction_count}
-"""
+    retriever = EvidenceRetriever(
+        documents,
+        embeddings
     )
 
-    # -------------------------------
-    # Product sales
-    # -------------------------------
-
-    product_sales = (
-        data["sales"]
-        .groupby("product_id")["quantity"]
-        .sum()
-        .reset_index()
-        .merge(
-            data["products"],
-            on="product_id",
-            how="left"
-        )
-        .sort_values("quantity", ascending=False)
+    print(
+        f"Evidence index loaded: "
+        f"{len(documents)} documents"
     )
-
-    product_lines = []
-
-    for _, row in product_sales.iterrows():
-        product_lines.append(
-            f"- {row['product_name']}: "
-            f"{int(row['quantity'])} units sold"
-        )
-
-    context_parts.append(
-        "\nPRODUCT SALES:\n" +
-        "\n".join(product_lines)
+else:
+    print(
+        "WARNING: Evidence index not found."
     )
-
-    # -------------------------------
-    # Inventory recommendations
-    # -------------------------------
-
-    inventory_recommendations = recommendations["inventory"]
-
-    inventory_lines = []
-
-    for _, row in inventory_recommendations.iterrows():
-
-        inventory_lines.append(
-            f"""
-- Product: {row['product_name']}
-  Store: {row['store_id']}
-  Current stock: {row['current_stock']} units
-  Average daily demand: {row['avg_daily_demand']} units
-  Priority: {row['priority']}
-  Stock status: {row['stock_status']}
-  Recommendation: {row['recommendation']}
-"""
-        )
-
-    context_parts.append(
-        "\nINVENTORY STATUS AND RECOMMENDATIONS:\n" +
-        "\n".join(inventory_lines)
-    )
-
-    # -------------------------------
-    # Sales trends
-    # -------------------------------
-
-    trend_lines = []
-
-    for _, row in trends.iterrows():
-
-        trend_lines.append(
-            f"""
-- {row['product_name']}
-  Sales trend: {row['trend']}
-  Change: {row['change_percent']}%
-"""
-        )
-
-    context_parts.append(
-        "\nSALES TRENDS:\n" +
-        "\n".join(trend_lines)
-    )
-
-    # -------------------------------
-    # Non-moving products
-    # -------------------------------
-
-    non_moving = recommendations.get("non_moving")
-
-    if non_moving is not None and not non_moving.empty:
-
-        non_moving_lines = []
-
-        for _, row in non_moving.iterrows():
-            non_moving_lines.append(
-                f"- {row['product_name']}: "
-                f"{row['total_units']} units sold"
-            )
-
-        context_parts.append(
-            "\nNON-MOVING PRODUCTS:\n" +
-            "\n".join(non_moving_lines)
-        )
-    else:
-        context_parts.append(
-            "\nNON-MOVING PRODUCTS:\n"
-            "No non-moving products were identified."
-        )
-
-    return "\n".join(context_parts)
 
 
 # --------------------------------------------------
-# Frontend
+# Build deterministic evidence
+# --------------------------------------------------
+
+print("Building deterministic business evidence...")
+
+deterministic_evidence = build_deterministic_evidence(
+    data
+)
+
+print("Business evidence ready.")
+
+
+# --------------------------------------------------
+# Routes
 # --------------------------------------------------
 
 @app.route("/")
 def home():
-    return send_from_directory(
-        FRONTEND_DIR,
-        "index.html"
-    )
+    return send_from_directory("frontend", "index.html")
 
 
-# --------------------------------------------------
-# Health check
-# --------------------------------------------------
+@app.route("/<path:filename>")
+def frontend_files(filename):
+    return send_from_directory("frontend", filename)
+
 
 @app.route("/health")
 def health():
     return jsonify({
-        "status": "ok",
-        "application": "RetailIQ"
+        "status": "healthy",
+        "service": "RetailIQ",
+        "evidence_index_loaded": retriever is not None
     })
 
-
-# --------------------------------------------------
-# Ask RetailIQ
-# --------------------------------------------------
 
 @app.route("/ask", methods=["POST"])
 def ask():
 
     try:
-        request_data = request.get_json(silent=True) or {}
+        body = request.get_json(
+            silent=True
+        )
 
-        question = request_data.get(
+        if not body:
+            return jsonify({
+                "error": "Request body is missing."
+            }), 400
+
+        question = body.get(
             "question",
             ""
         ).strip()
@@ -247,27 +142,73 @@ def ask():
                 "error": "Please enter a question."
             }), 400
 
-        context = build_business_context()
+        # ------------------------------------------
+        # 1. Detect business intent
+        # ------------------------------------------
+
+        intent = detect_query_intent(
+            question
+        )
+
+        print(
+            f"\nQuestion: {question}"
+        )
+
+        print(
+            f"Detected intent: {intent}"
+        )
+
+        # ------------------------------------------
+        # 2. Retrieve semantic evidence
+        # ------------------------------------------
+
+        retrieved_documents = []
+
+        if retriever is not None:
+
+            retrieved_documents = (
+                retriever.search(
+                    question,
+                    top_k=5
+                )
+            )
+
+        # ------------------------------------------
+        # 3. Build grounded context
+        # ------------------------------------------
+
+        context = format_evidence_for_question(
+            deterministic_evidence,
+            intent,
+            retrieved_documents
+        )
+
+        # ------------------------------------------
+        # 4. Ask Gemini to reason over evidence
+        # ------------------------------------------
 
         answer = ask_gemini(
             context,
             question
         )
 
+        # ------------------------------------------
+        # 5. Return answer
+        # ------------------------------------------
+
         return jsonify({
-            "question": question,
-            "answer": answer
+            "answer": answer,
+            "intent": intent
         })
 
     except Exception as error:
 
-        print("Application error:", error)
+        print(
+            f"ERROR while processing question: {error}"
+        )
 
         return jsonify({
-            "error": (
-                "RetailIQ could not process the request. "
-                "Please try again."
-            )
+            "error": str(error)
         }), 500
 
 
@@ -277,11 +218,11 @@ def ask():
 
 if __name__ == "__main__":
 
-    print("=" * 50)
-    print("RetailIQ - Sales and Inventory Copilot")
-    print("=" * 50)
-    print("Application: http://localhost:8000")
-    print("=" * 50)
+    print("\n========================================")
+    print("RetailIQ is starting...")
+    print("========================================")
+    print("Open: http://localhost:8000")
+    print("========================================\n")
 
     app.run(
         host="0.0.0.0",

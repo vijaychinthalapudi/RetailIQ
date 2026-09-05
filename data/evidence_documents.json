@@ -1,0 +1,732 @@
+[
+  {
+    "doc_id": "overall_sales",
+    "category": "sales_summary",
+    "text": "Retail sales summary for the available period. Total units sold: 2763. Total revenue: 56520100.00. Number of sales records: 900. Sales period: 2026-07-01 to 2026-08-29."
+  },
+  {
+    "doc_id": "product_sales_P020",
+    "category": "product_sales",
+    "text": "Sales performance for USB-C Cable (P020). Category: Accessories. Units sold: 315. Revenue: 157500.00."
+  },
+  {
+    "doc_id": "product_sales_P008",
+    "category": "product_sales",
+    "text": "Sales performance for Boat Headphones (P008). Category: Audio. Units sold: 276. Revenue: 552000.00."
+  },
+  {
+    "doc_id": "product_sales_P003",
+    "category": "product_sales",
+    "text": "Sales performance for OnePlus 12 (P003). Category: Smartphone. Units sold: 160. Revenue: 8000000.00."
+  },
+  {
+    "doc_id": "product_sales_P018",
+    "category": "product_sales",
+    "text": "Sales performance for TP-Link Router (P018). Category: Networking. Units sold: 155. Revenue: 465000.00."
+  },
+  {
+    "doc_id": "product_sales_P012",
+    "category": "product_sales",
+    "text": "Sales performance for HP Wireless Mouse (P012). Category: Accessories. Units sold: 154. Revenue: 231000.00."
+  },
+  {
+    "doc_id": "product_sales_P005",
+    "category": "product_sales",
+    "text": "Sales performance for Dell Inspiron 15 (P005). Category: Laptop. Units sold: 149. Revenue: 10430000.00."
+  },
+  {
+    "doc_id": "product_sales_P013",
+    "category": "product_sales",
+    "text": "Sales performance for Mechanical Keyboard (P013). Category: Accessories. Units sold: 144. Revenue: 504000.00."
+  },
+  {
+    "doc_id": "product_sales_P010",
+    "category": "product_sales",
+    "text": "Sales performance for JBL Bluetooth Speaker (P010). Category: Audio. Units sold: 142. Revenue: 710000.00."
+  },
+  {
+    "doc_id": "product_sales_P019",
+    "category": "product_sales",
+    "text": "Sales performance for D-Link Router (P019). Category: Networking. Units sold: 140. Revenue: 350000.00."
+  },
+  {
+    "doc_id": "product_sales_P015",
+    "category": "product_sales",
+    "text": "Sales performance for LG 27 inch Monitor (P015). Category: Monitor. Units sold: 134. Revenue: 2412000.00."
+  },
+  {
+    "doc_id": "product_sales_P014",
+    "category": "product_sales",
+    "text": "Sales performance for Samsung 24 inch Monitor (P014). Category: Monitor. Units sold: 133. Revenue: 1596000.00."
+  },
+  {
+    "doc_id": "product_sales_P004",
+    "category": "product_sales",
+    "text": "Sales performance for Redmi Note 14 (P004). Category: Smartphone. Units sold: 131. Revenue: 2358000.00."
+  },
+  {
+    "doc_id": "product_sales_P002",
+    "category": "product_sales",
+    "text": "Sales performance for Samsung Galaxy S24 (P002). Category: Smartphone. Units sold: 130. Revenue: 7150000.00."
+  },
+  {
+    "doc_id": "product_sales_P001",
+    "category": "product_sales",
+    "text": "Sales performance for iPhone 15 (P001). Category: Smartphone. Units sold: 116. Revenue: 6960000.00."
+  },
+  {
+    "doc_id": "product_sales_P009",
+    "category": "product_sales",
+    "text": "Sales performance for Sony Headphones (P009). Category: Audio. Units sold: 116. Revenue: 928000.00."
+  },
+  {
+    "doc_id": "product_sales_P006",
+    "category": "product_sales",
+    "text": "Sales performance for HP Pavilion (P006). Category: Laptop. Units sold: 115. Revenue: 7475000.00."
+  },
+  {
+    "doc_id": "product_sales_P011",
+    "category": "product_sales",
+    "text": "Sales performance for Logitech Mouse (P011). Category: Accessories. Units sold: 113. Revenue: 135600.00."
+  },
+  {
+    "doc_id": "product_sales_P007",
+    "category": "product_sales",
+    "text": "Sales performance for Lenovo IdeaPad (P007). Category: Laptop. Units sold: 90. Revenue: 5400000.00."
+  },
+  {
+    "doc_id": "product_sales_P016",
+    "category": "product_sales",
+    "text": "Sales performance for Canon Printer (P016). Category: Printer. Units sold: 28. Revenue: 420000.00."
+  },
+  {
+    "doc_id": "product_sales_P017",
+    "category": "product_sales",
+    "text": "Sales performance for Epson Printer (P017). Category: Printer. Units sold: 22. Revenue: 286000.00."
+  },
+  {
+    "doc_id": "inventory_S001_P001",
+    "category": "inventory",
+    "text": "Inventory status for iPhone 15 (P001) at store S001. Current stock: 86. Reorder level: 13. Estimated average daily demand: 1.93 units. Estimated days of stock: 44.5."
+  },
+  {
+    "doc_id": "inventory_S001_P002",
+    "category": "inventory",
+    "text": "Inventory status for Samsung Galaxy S24 (P002) at store S001. Current stock: 8. Reorder level: 18. Estimated average daily demand: 2.17 units. Estimated days of stock: 3.7."
+  },
+  {
+    "doc_id": "inventory_S001_P003",
+    "category": "inventory",
+    "text": "Inventory status for OnePlus 12 (P003) at store S001. Current stock: 36. Reorder level: 17. Estimated average daily demand: 2.67 units. Estimated days of stock: 13.5."
+  },
+  {
+    "doc_id": "inventory_S001_P004",
+    "category": "inventory",
+    "text": "Inventory status for Redmi Note 14 (P004) at store S001. Current stock: 22. Reorder level: 13. Estimated average daily demand: 2.18 units. Estimated days of stock: 10.1."
+  },
+  {
+    "doc_id": "inventory_S001_P005",
+    "category": "inventory",
+    "text": "Inventory status for Dell Inspiron 15 (P005) at store S001. Current stock: 91. Reorder level: 27. Estimated average daily demand: 2.48 units. Estimated days of stock: 36.6."
+  },
+  {
+    "doc_id": "inventory_S001_P006",
+    "category": "inventory",
+    "text": "Inventory status for HP Pavilion (P006) at store S001. Current stock: 16. Reorder level: 28. Estimated average daily demand: 1.92 units. Estimated days of stock: 8.3."
+  },
+  {
+    "doc_id": "inventory_S001_P007",
+    "category": "inventory",
+    "text": "Inventory status for Lenovo IdeaPad (P007) at store S001. Current stock: 59. Reorder level: 11. Estimated average daily demand: 1.50 units. Estimated days of stock: 39.3."
+  },
+  {
+    "doc_id": "inventory_S001_P008",
+    "category": "inventory",
+    "text": "Inventory status for Boat Headphones (P008) at store S001. Current stock: 3. Reorder level: 20. Estimated average daily demand: 4.60 units. Estimated days of stock: 0.7."
+  },
+  {
+    "doc_id": "inventory_S001_P009",
+    "category": "inventory",
+    "text": "Inventory status for Sony Headphones (P009) at store S001. Current stock: 32. Reorder level: 17. Estimated average daily demand: 1.93 units. Estimated days of stock: 16.6."
+  },
+  {
+    "doc_id": "inventory_S001_P010",
+    "category": "inventory",
+    "text": "Inventory status for JBL Bluetooth Speaker (P010) at store S001. Current stock: 69. Reorder level: 29. Estimated average daily demand: 2.37 units. Estimated days of stock: 29.2."
+  },
+  {
+    "doc_id": "inventory_S001_P011",
+    "category": "inventory",
+    "text": "Inventory status for Logitech Mouse (P011) at store S001. Current stock: 8. Reorder level: 27. Estimated average daily demand: 1.88 units. Estimated days of stock: 4.2."
+  },
+  {
+    "doc_id": "inventory_S001_P012",
+    "category": "inventory",
+    "text": "Inventory status for HP Wireless Mouse (P012) at store S001. Current stock: 30. Reorder level: 30. Estimated average daily demand: 2.57 units. Estimated days of stock: 11.7."
+  },
+  {
+    "doc_id": "inventory_S001_P013",
+    "category": "inventory",
+    "text": "Inventory status for Mechanical Keyboard (P013) at store S001. Current stock: 94. Reorder level: 27. Estimated average daily demand: 2.40 units. Estimated days of stock: 39.2."
+  },
+  {
+    "doc_id": "inventory_S001_P014",
+    "category": "inventory",
+    "text": "Inventory status for Samsung 24 inch Monitor (P014) at store S001. Current stock: 58. Reorder level: 17. Estimated average daily demand: 2.22 units. Estimated days of stock: 26.2."
+  },
+  {
+    "doc_id": "inventory_S001_P015",
+    "category": "inventory",
+    "text": "Inventory status for LG 27 inch Monitor (P015) at store S001. Current stock: 62. Reorder level: 28. Estimated average daily demand: 2.23 units. Estimated days of stock: 27.8."
+  },
+  {
+    "doc_id": "inventory_S001_P016",
+    "category": "inventory",
+    "text": "Inventory status for Canon Printer (P016) at store S001. Current stock: 40. Reorder level: 10. Estimated average daily demand: 0.47 units. Estimated days of stock: 85.7."
+  },
+  {
+    "doc_id": "inventory_S001_P017",
+    "category": "inventory",
+    "text": "Inventory status for Epson Printer (P017) at store S001. Current stock: 25. Reorder level: 23. Estimated average daily demand: 0.37 units. Estimated days of stock: 68.2."
+  },
+  {
+    "doc_id": "inventory_S001_P018",
+    "category": "inventory",
+    "text": "Inventory status for TP-Link Router (P018) at store S001. Current stock: 48. Reorder level: 18. Estimated average daily demand: 2.58 units. Estimated days of stock: 18.6."
+  },
+  {
+    "doc_id": "inventory_S001_P019",
+    "category": "inventory",
+    "text": "Inventory status for D-Link Router (P019) at store S001. Current stock: 24. Reorder level: 16. Estimated average daily demand: 2.33 units. Estimated days of stock: 10.3."
+  },
+  {
+    "doc_id": "inventory_S001_P020",
+    "category": "inventory",
+    "text": "Inventory status for USB-C Cable (P020) at store S001. Current stock: 48. Reorder level: 13. Estimated average daily demand: 5.25 units. Estimated days of stock: 9.1."
+  },
+  {
+    "doc_id": "inventory_S002_P001",
+    "category": "inventory",
+    "text": "Inventory status for iPhone 15 (P001) at store S002. Current stock: 16. Reorder level: 22. Estimated average daily demand: 1.93 units. Estimated days of stock: 8.3."
+  },
+  {
+    "doc_id": "inventory_S002_P002",
+    "category": "inventory",
+    "text": "Inventory status for Samsung Galaxy S24 (P002) at store S002. Current stock: 17. Reorder level: 21. Estimated average daily demand: 2.17 units. Estimated days of stock: 7.8."
+  },
+  {
+    "doc_id": "inventory_S002_P003",
+    "category": "inventory",
+    "text": "Inventory status for OnePlus 12 (P003) at store S002. Current stock: 49. Reorder level: 29. Estimated average daily demand: 2.67 units. Estimated days of stock: 18.4."
+  },
+  {
+    "doc_id": "inventory_S002_P004",
+    "category": "inventory",
+    "text": "Inventory status for Redmi Note 14 (P004) at store S002. Current stock: 38. Reorder level: 11. Estimated average daily demand: 2.18 units. Estimated days of stock: 17.4."
+  },
+  {
+    "doc_id": "inventory_S002_P005",
+    "category": "inventory",
+    "text": "Inventory status for Dell Inspiron 15 (P005) at store S002. Current stock: 98. Reorder level: 24. Estimated average daily demand: 2.48 units. Estimated days of stock: 39.5."
+  },
+  {
+    "doc_id": "inventory_S002_P006",
+    "category": "inventory",
+    "text": "Inventory status for HP Pavilion (P006) at store S002. Current stock: 2. Reorder level: 15. Estimated average daily demand: 1.92 units. Estimated days of stock: 1.0."
+  },
+  {
+    "doc_id": "inventory_S002_P007",
+    "category": "inventory",
+    "text": "Inventory status for Lenovo IdeaPad (P007) at store S002. Current stock: 53. Reorder level: 12. Estimated average daily demand: 1.50 units. Estimated days of stock: 35.3."
+  },
+  {
+    "doc_id": "inventory_S002_P008",
+    "category": "inventory",
+    "text": "Inventory status for Boat Headphones (P008) at store S002. Current stock: 75. Reorder level: 19. Estimated average daily demand: 4.60 units. Estimated days of stock: 16.3."
+  },
+  {
+    "doc_id": "inventory_S002_P009",
+    "category": "inventory",
+    "text": "Inventory status for Sony Headphones (P009) at store S002. Current stock: 85. Reorder level: 29. Estimated average daily demand: 1.93 units. Estimated days of stock: 44.0."
+  },
+  {
+    "doc_id": "inventory_S002_P010",
+    "category": "inventory",
+    "text": "Inventory status for JBL Bluetooth Speaker (P010) at store S002. Current stock: 51. Reorder level: 28. Estimated average daily demand: 2.37 units. Estimated days of stock: 21.5."
+  },
+  {
+    "doc_id": "inventory_S002_P011",
+    "category": "inventory",
+    "text": "Inventory status for Logitech Mouse (P011) at store S002. Current stock: 29. Reorder level: 12. Estimated average daily demand: 1.88 units. Estimated days of stock: 15.4."
+  },
+  {
+    "doc_id": "inventory_S002_P012",
+    "category": "inventory",
+    "text": "Inventory status for HP Wireless Mouse (P012) at store S002. Current stock: 10. Reorder level: 17. Estimated average daily demand: 2.57 units. Estimated days of stock: 3.9."
+  },
+  {
+    "doc_id": "inventory_S002_P013",
+    "category": "inventory",
+    "text": "Inventory status for Mechanical Keyboard (P013) at store S002. Current stock: 42. Reorder level: 12. Estimated average daily demand: 2.40 units. Estimated days of stock: 17.5."
+  },
+  {
+    "doc_id": "inventory_S002_P014",
+    "category": "inventory",
+    "text": "Inventory status for Samsung 24 inch Monitor (P014) at store S002. Current stock: 34. Reorder level: 13. Estimated average daily demand: 2.22 units. Estimated days of stock: 15.3."
+  },
+  {
+    "doc_id": "inventory_S002_P015",
+    "category": "inventory",
+    "text": "Inventory status for LG 27 inch Monitor (P015) at store S002. Current stock: 53. Reorder level: 18. Estimated average daily demand: 2.23 units. Estimated days of stock: 23.7."
+  },
+  {
+    "doc_id": "inventory_S002_P016",
+    "category": "inventory",
+    "text": "Inventory status for Canon Printer (P016) at store S002. Current stock: 63. Reorder level: 30. Estimated average daily demand: 0.47 units. Estimated days of stock: 135.0."
+  },
+  {
+    "doc_id": "inventory_S002_P017",
+    "category": "inventory",
+    "text": "Inventory status for Epson Printer (P017) at store S002. Current stock: 51. Reorder level: 15. Estimated average daily demand: 0.37 units. Estimated days of stock: 139.1."
+  },
+  {
+    "doc_id": "inventory_S002_P018",
+    "category": "inventory",
+    "text": "Inventory status for TP-Link Router (P018) at store S002. Current stock: 52. Reorder level: 21. Estimated average daily demand: 2.58 units. Estimated days of stock: 20.1."
+  },
+  {
+    "doc_id": "inventory_S002_P019",
+    "category": "inventory",
+    "text": "Inventory status for D-Link Router (P019) at store S002. Current stock: 31. Reorder level: 18. Estimated average daily demand: 2.33 units. Estimated days of stock: 13.3."
+  },
+  {
+    "doc_id": "inventory_S002_P020",
+    "category": "inventory",
+    "text": "Inventory status for USB-C Cable (P020) at store S002. Current stock: 94. Reorder level: 30. Estimated average daily demand: 5.25 units. Estimated days of stock: 17.9."
+  },
+  {
+    "doc_id": "inventory_S003_P001",
+    "category": "inventory",
+    "text": "Inventory status for iPhone 15 (P001) at store S003. Current stock: 14. Reorder level: 29. Estimated average daily demand: 1.93 units. Estimated days of stock: 7.2."
+  },
+  {
+    "doc_id": "inventory_S003_P002",
+    "category": "inventory",
+    "text": "Inventory status for Samsung Galaxy S24 (P002) at store S003. Current stock: 86. Reorder level: 15. Estimated average daily demand: 2.17 units. Estimated days of stock: 39.7."
+  },
+  {
+    "doc_id": "inventory_S003_P003",
+    "category": "inventory",
+    "text": "Inventory status for OnePlus 12 (P003) at store S003. Current stock: 73. Reorder level: 17. Estimated average daily demand: 2.67 units. Estimated days of stock: 27.4."
+  },
+  {
+    "doc_id": "inventory_S003_P004",
+    "category": "inventory",
+    "text": "Inventory status for Redmi Note 14 (P004) at store S003. Current stock: 25. Reorder level: 24. Estimated average daily demand: 2.18 units. Estimated days of stock: 11.5."
+  },
+  {
+    "doc_id": "inventory_S003_P005",
+    "category": "inventory",
+    "text": "Inventory status for Dell Inspiron 15 (P005) at store S003. Current stock: 53. Reorder level: 18. Estimated average daily demand: 2.48 units. Estimated days of stock: 21.3."
+  },
+  {
+    "doc_id": "inventory_S003_P006",
+    "category": "inventory",
+    "text": "Inventory status for HP Pavilion (P006) at store S003. Current stock: 86. Reorder level: 27. Estimated average daily demand: 1.92 units. Estimated days of stock: 44.9."
+  },
+  {
+    "doc_id": "inventory_S003_P007",
+    "category": "inventory",
+    "text": "Inventory status for Lenovo IdeaPad (P007) at store S003. Current stock: 33. Reorder level: 20. Estimated average daily demand: 1.50 units. Estimated days of stock: 22.0."
+  },
+  {
+    "doc_id": "inventory_S003_P008",
+    "category": "inventory",
+    "text": "Inventory status for Boat Headphones (P008) at store S003. Current stock: 12. Reorder level: 17. Estimated average daily demand: 4.60 units. Estimated days of stock: 2.6."
+  },
+  {
+    "doc_id": "inventory_S003_P009",
+    "category": "inventory",
+    "text": "Inventory status for Sony Headphones (P009) at store S003. Current stock: 4. Reorder level: 25. Estimated average daily demand: 1.93 units. Estimated days of stock: 2.1."
+  },
+  {
+    "doc_id": "inventory_S003_P010",
+    "category": "inventory",
+    "text": "Inventory status for JBL Bluetooth Speaker (P010) at store S003. Current stock: 56. Reorder level: 18. Estimated average daily demand: 2.37 units. Estimated days of stock: 23.7."
+  },
+  {
+    "doc_id": "inventory_S003_P011",
+    "category": "inventory",
+    "text": "Inventory status for Logitech Mouse (P011) at store S003. Current stock: 13. Reorder level: 16. Estimated average daily demand: 1.88 units. Estimated days of stock: 6.9."
+  },
+  {
+    "doc_id": "inventory_S003_P012",
+    "category": "inventory",
+    "text": "Inventory status for HP Wireless Mouse (P012) at store S003. Current stock: 77. Reorder level: 20. Estimated average daily demand: 2.57 units. Estimated days of stock: 30.0."
+  },
+  {
+    "doc_id": "inventory_S003_P013",
+    "category": "inventory",
+    "text": "Inventory status for Mechanical Keyboard (P013) at store S003. Current stock: 32. Reorder level: 30. Estimated average daily demand: 2.40 units. Estimated days of stock: 13.3."
+  },
+  {
+    "doc_id": "inventory_S003_P014",
+    "category": "inventory",
+    "text": "Inventory status for Samsung 24 inch Monitor (P014) at store S003. Current stock: 68. Reorder level: 22. Estimated average daily demand: 2.22 units. Estimated days of stock: 30.7."
+  },
+  {
+    "doc_id": "inventory_S003_P015",
+    "category": "inventory",
+    "text": "Inventory status for LG 27 inch Monitor (P015) at store S003. Current stock: 87. Reorder level: 24. Estimated average daily demand: 2.23 units. Estimated days of stock: 39.0."
+  },
+  {
+    "doc_id": "inventory_S003_P016",
+    "category": "inventory",
+    "text": "Inventory status for Canon Printer (P016) at store S003. Current stock: 23. Reorder level: 18. Estimated average daily demand: 0.47 units. Estimated days of stock: 49.3."
+  },
+  {
+    "doc_id": "inventory_S003_P017",
+    "category": "inventory",
+    "text": "Inventory status for Epson Printer (P017) at store S003. Current stock: 22. Reorder level: 17. Estimated average daily demand: 0.37 units. Estimated days of stock: 60.0."
+  },
+  {
+    "doc_id": "inventory_S003_P018",
+    "category": "inventory",
+    "text": "Inventory status for TP-Link Router (P018) at store S003. Current stock: 100. Reorder level: 27. Estimated average daily demand: 2.58 units. Estimated days of stock: 38.7."
+  },
+  {
+    "doc_id": "inventory_S003_P019",
+    "category": "inventory",
+    "text": "Inventory status for D-Link Router (P019) at store S003. Current stock: 73. Reorder level: 18. Estimated average daily demand: 2.33 units. Estimated days of stock: 31.3."
+  },
+  {
+    "doc_id": "inventory_S003_P020",
+    "category": "inventory",
+    "text": "Inventory status for USB-C Cable (P020) at store S003. Current stock: 100. Reorder level: 28. Estimated average daily demand: 5.25 units. Estimated days of stock: 19.0."
+  },
+  {
+    "doc_id": "inventory_S004_P001",
+    "category": "inventory",
+    "text": "Inventory status for iPhone 15 (P001) at store S004. Current stock: 59. Reorder level: 28. Estimated average daily demand: 1.93 units. Estimated days of stock: 30.5."
+  },
+  {
+    "doc_id": "inventory_S004_P002",
+    "category": "inventory",
+    "text": "Inventory status for Samsung Galaxy S24 (P002) at store S004. Current stock: 56. Reorder level: 21. Estimated average daily demand: 2.17 units. Estimated days of stock: 25.8."
+  },
+  {
+    "doc_id": "inventory_S004_P003",
+    "category": "inventory",
+    "text": "Inventory status for OnePlus 12 (P003) at store S004. Current stock: 33. Reorder level: 14. Estimated average daily demand: 2.67 units. Estimated days of stock: 12.4."
+  },
+  {
+    "doc_id": "inventory_S004_P004",
+    "category": "inventory",
+    "text": "Inventory status for Redmi Note 14 (P004) at store S004. Current stock: 70. Reorder level: 25. Estimated average daily demand: 2.18 units. Estimated days of stock: 32.1."
+  },
+  {
+    "doc_id": "inventory_S004_P005",
+    "category": "inventory",
+    "text": "Inventory status for Dell Inspiron 15 (P005) at store S004. Current stock: 16. Reorder level: 11. Estimated average daily demand: 2.48 units. Estimated days of stock: 6.4."
+  },
+  {
+    "doc_id": "inventory_S004_P006",
+    "category": "inventory",
+    "text": "Inventory status for HP Pavilion (P006) at store S004. Current stock: 19. Reorder level: 14. Estimated average daily demand: 1.92 units. Estimated days of stock: 9.9."
+  },
+  {
+    "doc_id": "inventory_S004_P007",
+    "category": "inventory",
+    "text": "Inventory status for Lenovo IdeaPad (P007) at store S004. Current stock: 85. Reorder level: 15. Estimated average daily demand: 1.50 units. Estimated days of stock: 56.7."
+  },
+  {
+    "doc_id": "inventory_S004_P008",
+    "category": "inventory",
+    "text": "Inventory status for Boat Headphones (P008) at store S004. Current stock: 92. Reorder level: 23. Estimated average daily demand: 4.60 units. Estimated days of stock: 20.0."
+  },
+  {
+    "doc_id": "inventory_S004_P009",
+    "category": "inventory",
+    "text": "Inventory status for Sony Headphones (P009) at store S004. Current stock: 81. Reorder level: 12. Estimated average daily demand: 1.93 units. Estimated days of stock: 41.9."
+  },
+  {
+    "doc_id": "inventory_S004_P010",
+    "category": "inventory",
+    "text": "Inventory status for JBL Bluetooth Speaker (P010) at store S004. Current stock: 54. Reorder level: 22. Estimated average daily demand: 2.37 units. Estimated days of stock: 22.8."
+  },
+  {
+    "doc_id": "inventory_S004_P011",
+    "category": "inventory",
+    "text": "Inventory status for Logitech Mouse (P011) at store S004. Current stock: 81. Reorder level: 24. Estimated average daily demand: 1.88 units. Estimated days of stock: 43.0."
+  },
+  {
+    "doc_id": "inventory_S004_P012",
+    "category": "inventory",
+    "text": "Inventory status for HP Wireless Mouse (P012) at store S004. Current stock: 72. Reorder level: 18. Estimated average daily demand: 2.57 units. Estimated days of stock: 28.1."
+  },
+  {
+    "doc_id": "inventory_S004_P013",
+    "category": "inventory",
+    "text": "Inventory status for Mechanical Keyboard (P013) at store S004. Current stock: 75. Reorder level: 10. Estimated average daily demand: 2.40 units. Estimated days of stock: 31.2."
+  },
+  {
+    "doc_id": "inventory_S004_P014",
+    "category": "inventory",
+    "text": "Inventory status for Samsung 24 inch Monitor (P014) at store S004. Current stock: 92. Reorder level: 13. Estimated average daily demand: 2.22 units. Estimated days of stock: 41.5."
+  },
+  {
+    "doc_id": "inventory_S004_P015",
+    "category": "inventory",
+    "text": "Inventory status for LG 27 inch Monitor (P015) at store S004. Current stock: 92. Reorder level: 27. Estimated average daily demand: 2.23 units. Estimated days of stock: 41.2."
+  },
+  {
+    "doc_id": "inventory_S004_P016",
+    "category": "inventory",
+    "text": "Inventory status for Canon Printer (P016) at store S004. Current stock: 39. Reorder level: 30. Estimated average daily demand: 0.47 units. Estimated days of stock: 83.6."
+  },
+  {
+    "doc_id": "inventory_S004_P017",
+    "category": "inventory",
+    "text": "Inventory status for Epson Printer (P017) at store S004. Current stock: 48. Reorder level: 13. Estimated average daily demand: 0.37 units. Estimated days of stock: 130.9."
+  },
+  {
+    "doc_id": "inventory_S004_P018",
+    "category": "inventory",
+    "text": "Inventory status for TP-Link Router (P018) at store S004. Current stock: 42. Reorder level: 23. Estimated average daily demand: 2.58 units. Estimated days of stock: 16.3."
+  },
+  {
+    "doc_id": "inventory_S004_P019",
+    "category": "inventory",
+    "text": "Inventory status for D-Link Router (P019) at store S004. Current stock: 25. Reorder level: 24. Estimated average daily demand: 2.33 units. Estimated days of stock: 10.7."
+  },
+  {
+    "doc_id": "inventory_S004_P020",
+    "category": "inventory",
+    "text": "Inventory status for USB-C Cable (P020) at store S004. Current stock: 5. Reorder level: 18. Estimated average daily demand: 5.25 units. Estimated days of stock: 1.0."
+  },
+  {
+    "doc_id": "inventory_S005_P001",
+    "category": "inventory",
+    "text": "Inventory status for iPhone 15 (P001) at store S005. Current stock: 69. Reorder level: 15. Estimated average daily demand: 1.93 units. Estimated days of stock: 35.7."
+  },
+  {
+    "doc_id": "inventory_S005_P002",
+    "category": "inventory",
+    "text": "Inventory status for Samsung Galaxy S24 (P002) at store S005. Current stock: 69. Reorder level: 13. Estimated average daily demand: 2.17 units. Estimated days of stock: 31.8."
+  },
+  {
+    "doc_id": "inventory_S005_P003",
+    "category": "inventory",
+    "text": "Inventory status for OnePlus 12 (P003) at store S005. Current stock: 85. Reorder level: 19. Estimated average daily demand: 2.67 units. Estimated days of stock: 31.9."
+  },
+  {
+    "doc_id": "inventory_S005_P004",
+    "category": "inventory",
+    "text": "Inventory status for Redmi Note 14 (P004) at store S005. Current stock: 86. Reorder level: 26. Estimated average daily demand: 2.18 units. Estimated days of stock: 39.4."
+  },
+  {
+    "doc_id": "inventory_S005_P005",
+    "category": "inventory",
+    "text": "Inventory status for Dell Inspiron 15 (P005) at store S005. Current stock: 82. Reorder level: 16. Estimated average daily demand: 2.48 units. Estimated days of stock: 33.0."
+  },
+  {
+    "doc_id": "inventory_S005_P006",
+    "category": "inventory",
+    "text": "Inventory status for HP Pavilion (P006) at store S005. Current stock: 24. Reorder level: 21. Estimated average daily demand: 1.92 units. Estimated days of stock: 12.5."
+  },
+  {
+    "doc_id": "inventory_S005_P007",
+    "category": "inventory",
+    "text": "Inventory status for Lenovo IdeaPad (P007) at store S005. Current stock: 25. Reorder level: 27. Estimated average daily demand: 1.50 units. Estimated days of stock: 16.7."
+  },
+  {
+    "doc_id": "inventory_S005_P008",
+    "category": "inventory",
+    "text": "Inventory status for Boat Headphones (P008) at store S005. Current stock: 72. Reorder level: 10. Estimated average daily demand: 4.60 units. Estimated days of stock: 15.7."
+  },
+  {
+    "doc_id": "inventory_S005_P009",
+    "category": "inventory",
+    "text": "Inventory status for Sony Headphones (P009) at store S005. Current stock: 81. Reorder level: 20. Estimated average daily demand: 1.93 units. Estimated days of stock: 41.9."
+  },
+  {
+    "doc_id": "inventory_S005_P010",
+    "category": "inventory",
+    "text": "Inventory status for JBL Bluetooth Speaker (P010) at store S005. Current stock: 67. Reorder level: 10. Estimated average daily demand: 2.37 units. Estimated days of stock: 28.3."
+  },
+  {
+    "doc_id": "inventory_S005_P011",
+    "category": "inventory",
+    "text": "Inventory status for Logitech Mouse (P011) at store S005. Current stock: 19. Reorder level: 21. Estimated average daily demand: 1.88 units. Estimated days of stock: 10.1."
+  },
+  {
+    "doc_id": "inventory_S005_P012",
+    "category": "inventory",
+    "text": "Inventory status for HP Wireless Mouse (P012) at store S005. Current stock: 44. Reorder level: 17. Estimated average daily demand: 2.57 units. Estimated days of stock: 17.1."
+  },
+  {
+    "doc_id": "inventory_S005_P013",
+    "category": "inventory",
+    "text": "Inventory status for Mechanical Keyboard (P013) at store S005. Current stock: 12. Reorder level: 17. Estimated average daily demand: 2.40 units. Estimated days of stock: 5.0."
+  },
+  {
+    "doc_id": "inventory_S005_P014",
+    "category": "inventory",
+    "text": "Inventory status for Samsung 24 inch Monitor (P014) at store S005. Current stock: 77. Reorder level: 12. Estimated average daily demand: 2.22 units. Estimated days of stock: 34.7."
+  },
+  {
+    "doc_id": "inventory_S005_P015",
+    "category": "inventory",
+    "text": "Inventory status for LG 27 inch Monitor (P015) at store S005. Current stock: 15. Reorder level: 25. Estimated average daily demand: 2.23 units. Estimated days of stock: 6.7."
+  },
+  {
+    "doc_id": "inventory_S005_P016",
+    "category": "inventory",
+    "text": "Inventory status for Canon Printer (P016) at store S005. Current stock: 13. Reorder level: 27. Estimated average daily demand: 0.47 units. Estimated days of stock: 27.9."
+  },
+  {
+    "doc_id": "inventory_S005_P017",
+    "category": "inventory",
+    "text": "Inventory status for Epson Printer (P017) at store S005. Current stock: 21. Reorder level: 14. Estimated average daily demand: 0.37 units. Estimated days of stock: 57.3."
+  },
+  {
+    "doc_id": "inventory_S005_P018",
+    "category": "inventory",
+    "text": "Inventory status for TP-Link Router (P018) at store S005. Current stock: 89. Reorder level: 25. Estimated average daily demand: 2.58 units. Estimated days of stock: 34.5."
+  },
+  {
+    "doc_id": "inventory_S005_P019",
+    "category": "inventory",
+    "text": "Inventory status for D-Link Router (P019) at store S005. Current stock: 75. Reorder level: 15. Estimated average daily demand: 2.33 units. Estimated days of stock: 32.1."
+  },
+  {
+    "doc_id": "inventory_S005_P020",
+    "category": "inventory",
+    "text": "Inventory status for USB-C Cable (P020) at store S005. Current stock: 38. Reorder level: 26. Estimated average daily demand: 5.25 units. Estimated days of stock: 7.2."
+  },
+  {
+    "doc_id": "store_sales_S003",
+    "category": "store_sales",
+    "text": "Sales performance for MVP Colony Store (S003) in Visakhapatnam. Units sold: 555. Revenue: 12665800.00. Transactions: 172."
+  },
+  {
+    "doc_id": "store_sales_S001",
+    "category": "store_sales",
+    "text": "Sales performance for Central Store (S001) in Visakhapatnam. Units sold: 494. Revenue: 12193000.00. Transactions: 165."
+  },
+  {
+    "doc_id": "store_sales_S002",
+    "category": "store_sales",
+    "text": "Sales performance for Beach Road Store (S002) in Visakhapatnam. Units sold: 617. Revenue: 10825500.00. Transactions: 190."
+  },
+  {
+    "doc_id": "store_sales_S004",
+    "category": "store_sales",
+    "text": "Sales performance for Mangalagiri Store (S004) in Mangalagiri. Units sold: 583. Revenue: 10610000.00. Transactions: 199."
+  },
+  {
+    "doc_id": "store_sales_S005",
+    "category": "store_sales",
+    "text": "Sales performance for Vijayawada Store (S005) in Vijayawada. Units sold: 514. Revenue: 10225800.00. Transactions: 174."
+  },
+  {
+    "doc_id": "sales_trend_P001",
+    "category": "sales_trend",
+    "text": "Sales trend for iPhone 15 (P001). Recent 7-day average sales: 4.57 units. Previous 7-day average sales: 4.86 units. sales changed by -5.88%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P002",
+    "category": "sales_trend",
+    "text": "Sales trend for Samsung Galaxy S24 (P002). Recent 7-day average sales: 4.14 units. Previous 7-day average sales: 4.43 units. sales changed by -6.45%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P003",
+    "category": "sales_trend",
+    "text": "Sales trend for OnePlus 12 (P003). Recent 7-day average sales: 6.14 units. Previous 7-day average sales: 5.14 units. sales changed by 19.44%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P004",
+    "category": "sales_trend",
+    "text": "Sales trend for Redmi Note 14 (P004). Recent 7-day average sales: 4.00 units. Previous 7-day average sales: 3.57 units. sales changed by 12.00%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P005",
+    "category": "sales_trend",
+    "text": "Sales trend for Dell Inspiron 15 (P005). Recent 7-day average sales: 4.57 units. Previous 7-day average sales: 3.57 units. sales changed by 28.00%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P006",
+    "category": "sales_trend",
+    "text": "Sales trend for HP Pavilion (P006). Recent 7-day average sales: 4.86 units. Previous 7-day average sales: 3.57 units. sales changed by 36.00%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P007",
+    "category": "sales_trend",
+    "text": "Sales trend for Lenovo IdeaPad (P007). Recent 7-day average sales: 4.14 units. Previous 7-day average sales: 3.71 units. sales changed by 11.54%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P008",
+    "category": "sales_trend",
+    "text": "Sales trend for Boat Headphones (P008). Recent 7-day average sales: 12.00 units. Previous 7-day average sales: 15.29 units. sales changed by -21.50%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P009",
+    "category": "sales_trend",
+    "text": "Sales trend for Sony Headphones (P009). Recent 7-day average sales: 3.00 units. Previous 7-day average sales: 3.00 units. sales changed by 0.00%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P010",
+    "category": "sales_trend",
+    "text": "Sales trend for JBL Bluetooth Speaker (P010). Recent 7-day average sales: 2.71 units. Previous 7-day average sales: 4.14 units. sales changed by -34.48%. Trend classification: SALES DROP."
+  },
+  {
+    "doc_id": "sales_trend_P011",
+    "category": "sales_trend",
+    "text": "Sales trend for Logitech Mouse (P011). Recent 7-day average sales: 4.86 units. Previous 7-day average sales: 4.71 units. sales changed by 3.03%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P012",
+    "category": "sales_trend",
+    "text": "Sales trend for HP Wireless Mouse (P012). Recent 7-day average sales: 5.14 units. Previous 7-day average sales: 7.14 units. sales changed by -28.00%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P013",
+    "category": "sales_trend",
+    "text": "Sales trend for Mechanical Keyboard (P013). Recent 7-day average sales: 4.29 units. Previous 7-day average sales: 4.71 units. sales changed by -9.09%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P014",
+    "category": "sales_trend",
+    "text": "Sales trend for Samsung 24 inch Monitor (P014). Recent 7-day average sales: 3.29 units. Previous 7-day average sales: 3.71 units. sales changed by -11.54%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P015",
+    "category": "sales_trend",
+    "text": "Sales trend for LG 27 inch Monitor (P015). Recent 7-day average sales: 3.43 units. Previous 7-day average sales: 4.29 units. sales changed by -20.00%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P016",
+    "category": "sales_trend",
+    "text": "Sales trend for Canon Printer (P016). Recent 7-day average sales: 0.71 units. Previous 7-day average sales: 0.86 units. sales changed by -16.67%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P017",
+    "category": "sales_trend",
+    "text": "Sales trend for Epson Printer (P017). Recent 7-day average sales: 0.43 units. Previous 7-day average sales: 0.57 units. sales changed by -25.00%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P018",
+    "category": "sales_trend",
+    "text": "Sales trend for TP-Link Router (P018). Recent 7-day average sales: 5.71 units. Previous 7-day average sales: 3.57 units. sales changed by 60.00%. Trend classification: SALES SPIKE."
+  },
+  {
+    "doc_id": "sales_trend_P019",
+    "category": "sales_trend",
+    "text": "Sales trend for D-Link Router (P019). Recent 7-day average sales: 4.57 units. Previous 7-day average sales: 3.86 units. sales changed by 18.52%. Trend classification: STABLE."
+  },
+  {
+    "doc_id": "sales_trend_P020",
+    "category": "sales_trend",
+    "text": "Sales trend for USB-C Cable (P020). Recent 7-day average sales: 19.86 units. Previous 7-day average sales: 10.43 units. sales changed by 90.41%. Trend classification: SALES SPIKE."
+  }
+]
