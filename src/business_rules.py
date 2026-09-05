@@ -1,21 +1,59 @@
 import pandas as pd
 
 
-def generate_inventory_recommendations(inventory_analysis):
+def get_stock_out_message(days_of_stock, stock_out_date):
+    """Convert estimated stock days into a human-readable warning."""
+
+    if pd.isna(days_of_stock) or pd.isna(stock_out_date):
+        return "Stock-out timing cannot be estimated from the available data."
+
+    days = float(days_of_stock)
+
+    if days <= 1:
+        return "Likely to run out today"
+    elif days <= 2:
+        return f"Likely to run out tomorrow ({stock_out_date.strftime('%d %b %Y')})"
+    elif days <= 7:
+        return f"Urgent replenishment required by {stock_out_date.strftime('%d %b %Y')}"
+    elif days <= 30:
+        return f"Stock expected to last until {stock_out_date.strftime('%d %b %Y')}"
+    else:
+        return f"Stock expected to last until {stock_out_date.strftime('%d %b %Y')}"
+
+
+def generate_inventory_recommendations(inventory_analysis, reference_date=None):
     """
-    Generate deterministic inventory recommendations
-    based on estimated days of stock.
+    Generate deterministic inventory recommendations.
+
+    reference_date:
+        Date from which stock-out dates are calculated.
+        If not provided, today's date is used.
     """
 
     recommendations = []
 
+    if reference_date is None:
+        reference_date = pd.Timestamp.today().normalize()
+    else:
+        reference_date = pd.Timestamp(reference_date).normalize()
+
     for _, row in inventory_analysis.iterrows():
+
         days = row["estimated_days_of_stock"]
 
         if pd.isna(days):
             continue
 
-        if days <= 3:
+        days = float(days)
+
+        # Calculate expected stock-out date
+        stock_out_date = reference_date + pd.Timedelta(days=days)
+
+        # Determine priority and action
+        if days <= 1:
+            priority = "CRITICAL"
+            action = "Reorder immediately"
+        elif days <= 3:
             priority = "CRITICAL"
             action = "Reorder immediately"
         elif days <= 7:
@@ -28,16 +66,22 @@ def generate_inventory_recommendations(inventory_analysis):
             priority = "NORMAL"
             action = "Inventory level is healthy"
 
+        # Human-readable stock situation
+        stock_message = get_stock_out_message(
+            days,
+            stock_out_date
+        )
+
         recommendations.append({
             "store_id": row["store_id"],
             "product_id": row["product_id"],
             "product_name": row["product_name"],
             "priority": priority,
             "current_stock": int(row["current_stock"]),
-            "avg_daily_demand": round(
-                row["avg_daily_demand"], 2
-            ),
-            "estimated_days_of_stock": days,
+            "avg_daily_demand": round(row["avg_daily_demand"], 2),
+            "estimated_days_of_stock": round(days, 1),
+            "expected_stock_out_date": stock_out_date.strftime("%Y-%m-%d"),
+            "stock_status": stock_message,
             "recommendation": action
         })
 
@@ -45,9 +89,7 @@ def generate_inventory_recommendations(inventory_analysis):
 
 
 def generate_sales_recommendations(sales_trends):
-    """
-    Generate deterministic recommendations from sales trends.
-    """
+    """Generate deterministic recommendations from sales trends."""
 
     recommendations = []
 
@@ -81,14 +123,14 @@ def generate_sales_recommendations(sales_trends):
 
 def generate_all_recommendations(
     inventory_analysis,
-    sales_trends
+    sales_trends,
+    reference_date=None
 ):
-    """
-    Generate both inventory and sales recommendations.
-    """
+    """Generate all deterministic business recommendations."""
 
     inventory_recommendations = generate_inventory_recommendations(
-        inventory_analysis
+        inventory_analysis,
+        reference_date
     )
 
     sales_recommendations = generate_sales_recommendations(
@@ -99,46 +141,3 @@ def generate_all_recommendations(
         "inventory": inventory_recommendations,
         "sales": sales_recommendations
     }
-
-
-if __name__ == "__main__":
-    from data_loader import load_all_data
-    from analytics import (
-        sales_trends,
-        inventory_demand_analysis
-    )
-
-    data = load_all_data()
-
-    inventory_analysis = inventory_demand_analysis(
-        data["inventory"],
-        data["sales"],
-        data["products"]
-    )
-
-    trends = sales_trends(
-        data["sales"],
-        data["products"]
-    )
-
-    recommendations = generate_all_recommendations(
-        inventory_analysis,
-        trends
-    )
-
-    print("\n=== INVENTORY RECOMMENDATIONS ===")
-    print(
-        recommendations["inventory"]
-        .sort_values(
-            ["priority", "estimated_days_of_stock"]
-        )
-        .head(20)
-        .to_string(index=False)
-    )
-
-    print("\n=== SALES RECOMMENDATIONS ===")
-    print(
-        recommendations["sales"]
-        .sort_values("priority")
-        .to_string(index=False)
-    )
