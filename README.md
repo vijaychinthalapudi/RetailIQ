@@ -291,7 +291,8 @@ The repository also contains generated evidence documents and precomputed embedd
 
 ## Demo Video
 
-[▶️ Watch the Demo Video](https://drive.google.com/file/d/1kTiCmPU3EXzUWhawqNYrK8VcuU0QuRED/view?usp=sharing)
+[▶️ Watch the Demo Video](https://drive.google.com/figit status
+le/d/1kTiCmPU3EXzUWhawqNYrK8VcuU0QuRED/view?usp=sharing)
 
 ## GitHub Repository
 
