@@ -288,11 +288,12 @@ RetailIQ uses generated retail data for:
 
 The repository also contains generated evidence documents and precomputed embeddings used by the application.
 
+
 ## Demo Video
 
-https://drive.google.com/file/d/1kTiCmPU3EXzUWhawqNYrK8VcuU0QuRED/view?usp=sharing
+[▶️ Watch the Demo Video](https://drive.google.com/file/d/1kTiCmPU3EXzUWhawqNYrK8VcuU0QuRED/view?usp=sharing)
 
 ## GitHub Repository
 
-https://github.com/vijaychinthalapudi/RetailIQ
+[📂 RetailIQ GitHub Repository](https://github.com/vijaychinthalapudi/RetailIQ)
 
