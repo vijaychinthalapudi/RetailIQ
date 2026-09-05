@@ -11,178 +11,257 @@
 
 <body>
 
-    <header class="topbar">
-        <div>
-            <h1>RetailIQ</h1>
-            <p>AI Sales & Inventory Copilot</p>
+    <div class="app-shell">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <span class="brand-mark">Retail<span class="brand-accent">IQ</span></span>
+            </div>
+
+            <nav class="side-nav">
+
+                <button class="nav-item active" data-scroll="overview">
+                    <span class="nav-icon">🏠</span> Dashboard
+                </button>
+
+                <button class="nav-item" data-scroll="copilot">
+                    <span class="nav-icon">💬</span> Ask RetailIQ
+                </button>
+
+            </nav>
+
+            <div class="side-section-label">Quick questions</div>
+
+            <div class="quick-questions">
+
+                <button class="quick-item alert" data-question="Which products need attention right now?">
+                    <span class="nav-icon">⚠️</span> What needs attention?
+                </button>
+
+                <button class="quick-item" data-question="Are there any products at risk of stock-out?">
+                    <span class="nav-icon">📦</span> Risk of stock-out?
+                </button>
+
+                <button class="quick-item" data-question="Which products are selling the most?">
+                    <span class="nav-icon">📈</span> Top selling products?
+                </button>
+
+                <button class="quick-item" data-question="Which products have unusual sales changes?">
+                    <span class="nav-icon">📊</span> Unusual sales changes?
+                </button>
+
+                <button class="quick-item" data-question="Which store is performing the best?">
+                    <span class="nav-icon">🏬</span> Best performing store?
+                </button>
+
+                <button class="quick-item" data-question="Which products are overstocked?">
+                    <span class="nav-icon">📥</span> Overstocked products?
+                </button>
+
+            </div>
+
+            <div class="sidebar-footer">
+                RetailIQ · AI Sales & Inventory Copilot
+            </div>
+
+        </aside>
+
+
+        <!-- Main area -->
+        <div class="main-area">
+
+            <header class="topbar">
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+                <div class="topbar-spacer"></div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    System Online
+                </div>
+
+            </header>
+
+
+            <main class="content">
+
+                <!-- Welcome -->
+                <section class="hero">
+                    <h2>Good day, Manager 👋</h2>
+                    <p>
+                        Ask questions about your sales, inventory and products.
+                        RetailIQ analyzes your business data and returns
+                        evidence-based recommendations.
+                    </p>
+                </section>
+
+
+                <!-- Quick overview -->
+                <section class="overview" id="overview">
+
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-title">Units Sold</div>
+                            <div class="card-icon">📦</div>
+                        </div>
+                        <div class="card-value" id="unitsSold">—</div>
+                        <div class="card-subtitle">Total units across all stores</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-title">Revenue</div>
+                            <div class="card-icon">💰</div>
+                        </div>
+                        <div class="card-value" id="revenue">—</div>
+                        <div class="card-subtitle">Total sales value</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-title">Critical Stock Items</div>
+                            <div class="card-icon alert-icon">⚠️</div>
+                        </div>
+                        <div class="card-value alert" id="criticalStock">—</div>
+                        <div class="card-subtitle">Need immediate attention</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-title">Sales Spikes</div>
+                            <div class="card-icon">📈</div>
+                        </div>
+                        <div class="card-value" id="salesSpikes">—</div>
+                        <div class="card-subtitle">Detected in recent sales</div>
+                    </div>
+
+                </section>
+
+
+                <!-- AI Copilot -->
+                <section class="copilot" id="copilot">
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Ask RetailIQ</h2>
+                            <p>Know your insights — grounded in your actual sales and inventory data.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="question-box">
+
+                        <span class="question-icon">🔎</span>
+
+                        <textarea
+                            id="question"
+                            placeholder="Example: Which products need attention right now?"
+                            rows="1"
+                        ></textarea>
+
+                        <button id="askButton" onclick="askQuestion()">
+                            <span class="btn-icon">➤</span> Ask RetailIQ
+                        </button>
+
+                    </div>
+
+                    <div class="hint-line">Press Ctrl + Enter to ask</div>
+
+
+                    <!-- Loading -->
+                    <div id="loading" class="loading hidden">
+                        <div class="spinner"></div>
+                        <span>Analyzing your business data...</span>
+                    </div>
+
+
+                    <!-- AI response -->
+                    <div id="responseContainer" class="response-container hidden">
+
+                        <div id="summaryBox" class="manager-summary hidden">
+                            <div class="summary-header">
+                                <div class="summary-icon">✨</div>
+                                <div>
+                                    <div class="summary-label">RETAILIQ ANALYSIS</div>
+                                    <div class="summary-heading" id="summaryHeading">Analysis</div>
+                                </div>
+                            </div>
+                            <p class="summary-text" id="summaryText"></p>
+                        </div>
+
+                        <div id="results" class="result-grid"></div>
+
+                        <div id="emptyState" class="empty-result hidden">
+                            <div class="empty-icon">✓</div>
+                            <div class="empty-title">Nothing to flag here</div>
+                            <div class="empty-text" id="emptyText">
+                                No items currently match this question based on the available data.
+                            </div>
+                        </div>
+
+                        <div id="noteBox" class="note-box hidden">
+                            <span class="note-icon">ℹ️</span>
+                            <span id="noteText"></span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Error -->
+                    <div id="errorContainer" class="error hidden">
+                        <strong>Something went wrong.</strong>
+                        <p id="errorMessage"></p>
+                    </div>
+
+                </section>
+
+
+                <!-- Information -->
+                <section class="info">
+
+                    <div>
+                        <h3>How RetailIQ works</h3>
+
+                        <p>
+                            RetailIQ combines deterministic sales and inventory
+                            analytics with Gemini AI to answer business questions,
+                            always grounded in your actual figures.
+                        </p>
+                    </div>
+
+                    <div class="info-points">
+
+                        <div>
+                            <strong>01</strong>
+                            <span>Analyze actual retail data</span>
+                        </div>
+
+                        <div>
+                            <strong>02</strong>
+                            <span>Identify risks and trends</span>
+                        </div>
+
+                        <div>
+                            <strong>03</strong>
+                            <span>Generate grounded recommendations</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <footer>
+                    RetailIQ · AI-powered Sales & Inventory Intelligence
+                </footer>
+
+            </main>
+
         </div>
 
-        <div class="status">
-            <span class="status-dot"></span>
-            System Online
-        </div>
-    </header>
-
-
-    <main class="container">
-
-        <!-- Welcome section -->
-        <section class="hero">
-            <h2>Good morning, Manager 👋</h2>
-
-            <p>
-                Ask questions about your sales, inventory and products.
-                RetailIQ will analyze your business data and provide
-                evidence-based recommendations.
-            </p>
-        </section>
-
-
-        <!-- Quick overview -->
-        <section class="overview">
-
-            <div class="card">
-                <div class="card-title">Units Sold</div>
-                <div class="card-value" id="unitsSold">—</div>
-                <div class="card-subtitle">Across all stores</div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Revenue</div>
-                <div class="card-value" id="revenue">—</div>
-                <div class="card-subtitle">Total sales value</div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Critical Stock</div>
-                <div class="card-value alert" id="criticalStock">—</div>
-                <div class="card-subtitle">Items needing attention</div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Sales Spikes</div>
-                <div class="card-value" id="salesSpikes">—</div>
-                <div class="card-subtitle">Products with rising demand</div>
-            </div>
-
-        </section>
-
-
-        <!-- AI Copilot -->
-        <section class="copilot">
-
-            <div class="section-heading">
-                <div>
-                    <h2>Ask RetailIQ</h2>
-                    <p>Know your Insights.</p>
-                </div>
-            </div>
-
-
-            <div class="question-box">
-
-                <textarea
-                    id="question"
-                    placeholder="Example: Which products need attention right now?"
-                    rows="3"
-                ></textarea>
-
-                <button id="askButton" onclick="askQuestion()">
-                    Ask RetailIQ
-                </button>
-
-            </div>
-
-
-            <!-- Example questions -->
-            <div class="examples">
-
-                <button onclick="useQuestion('Which products need attention right now?')">
-                    🚨 What needs attention?
-                </button>
-
-                <button onclick="useQuestion('Which products are selling the most?')">
-                    📈 Top selling products
-                </button>
-
-                <button onclick="useQuestion('Are there any products at risk of stock-out?')">
-                    📦 Stock-out risks
-                </button>
-
-                <button onclick="useQuestion('Which products have unusual sales changes?')">
-                    📊 Sales changes
-                </button>
-
-            </div>
-
-
-            <!-- Loading -->
-            <div id="loading" class="loading hidden">
-                <div class="spinner"></div>
-                <span>Analyzing your business data...</span>
-            </div>
-
-
-            <!-- AI response -->
-            <div id="responseContainer" class="response-container hidden">
-
-                <div class="response-header">
-                    <span>RetailIQ Results</span>
-                </div>
-
-                <div id="results" class="response"></div>
-
-            </div>
-
-
-            <!-- Error -->
-            <div id="errorContainer" class="error hidden">
-                <strong>Something went wrong.</strong>
-                <p id="errorMessage"></p>
-            </div>
-
-        </section>
-
-
-        <!-- Information -->
-        <section class="info">
-
-            <div>
-                <h3>How RetailIQ works</h3>
-
-                <p>
-                    RetailIQ combines deterministic sales and inventory
-                    analytics with Gemini AI to answer business questions.
-                </p>
-            </div>
-
-            <div class="info-points">
-
-                <div>
-                    <strong>01</strong>
-                    <span>Analyze actual retail data</span>
-                </div>
-
-                <div>
-                    <strong>02</strong>
-                    <span>Identify risks and trends</span>
-                </div>
-
-                <div>
-                    <strong>03</strong>
-                    <span>Generate grounded recommendations</span>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-        RetailIQ · AI-powered Sales & Inventory Intelligence
-    </footer>
+    </div>
 
 
     <script src="/app.js"></script>

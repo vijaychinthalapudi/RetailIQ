@@ -166,6 +166,10 @@ def make_cards(intent):
             cards.append({
                 "title": row["product_name"],
 
+                "item_id": row["product_id"],
+
+                "store_id": row["store_id"],
+
                 "priority": row["priority"],
 
                 "main": (
@@ -216,6 +220,10 @@ def make_cards(intent):
             cards.append({
                 "title": row["product_name"],
 
+                "item_id": row["product_id"],
+
+                "store_id": row["store_id"],
+
                 "priority": "LOW",
 
                 "main": (
@@ -259,6 +267,8 @@ def make_cards(intent):
 
             cards.append({
                 "title": row["product_name"],
+
+                "item_id": row["product_id"],
 
                 "priority": "TOP SELLER",
 
@@ -318,6 +328,8 @@ def make_cards(intent):
             cards.append({
                 "title": row["product_name"],
 
+                "item_id": row["product_id"],
+
                 "priority": row["priority"],
 
                 "main": (
@@ -355,6 +367,8 @@ def make_cards(intent):
 
             cards.append({
                 "title": row["store_name"],
+
+                "item_id": row["store_id"],
 
                 "priority": "STORE",
 
@@ -398,6 +412,8 @@ def make_cards(intent):
 
             cards.append({
                 "title": row["product_name"],
+
+                "item_id": row["product_id"],
 
                 "priority": "PRODUCT",
 
