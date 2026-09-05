@@ -22,6 +22,9 @@ def detect_query_intent(question):
             "reorder",
             "replenish",
             "need to restock",
+            "need attention",
+            "needs attention",
+            "what needs attention",
         ]
     ):
         return "stock_out"
