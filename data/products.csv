@@ -1,0 +1,21 @@
+product_id,product_name,category,price
+P001,iPhone 15,Smartphone,60000
+P002,Samsung Galaxy S24,Smartphone,55000
+P003,OnePlus 12,Smartphone,50000
+P004,Redmi Note 14,Smartphone,18000
+P005,Dell Inspiron 15,Laptop,70000
+P006,HP Pavilion,Laptop,65000
+P007,Lenovo IdeaPad,Laptop,60000
+P008,Boat Headphones,Audio,2000
+P009,Sony Headphones,Audio,8000
+P010,JBL Bluetooth Speaker,Audio,5000
+P011,Logitech Mouse,Accessories,1200
+P012,HP Wireless Mouse,Accessories,1500
+P013,Mechanical Keyboard,Accessories,3500
+P014,Samsung 24 inch Monitor,Monitor,12000
+P015,LG 27 inch Monitor,Monitor,18000
+P016,Canon Printer,Printer,15000
+P017,Epson Printer,Printer,13000
+P018,TP-Link Router,Networking,3000
+P019,D-Link Router,Networking,2500
+P020,USB-C Cable,Accessories,500
